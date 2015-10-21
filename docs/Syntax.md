@@ -234,7 +234,7 @@ end
 
 ### Loops
 
-##### While
+#### While
 
 **Syntax:**
 ```
@@ -295,7 +295,7 @@ Inside the loop i = 4
 ```
 
 
-##### Until 
+#### Until 
 
 **Syntax:**
 ```
@@ -402,7 +402,7 @@ Value of local variable is 4
 Value of local variable is 5
 ```
 
-##### Break
+#### Break
 
 **Syntax:**
 
@@ -425,7 +425,7 @@ Value of local variable is 1
 Value of local variable is 2
 ```
 
-##### Next
+#### Next
 
 **Syntax:**
 
@@ -449,7 +449,7 @@ Value of local variable is 4
 Value of local variable is 5
 ```
 
-##### Redo
+#### Redo
 
 **Syntax:**
 
@@ -472,7 +472,7 @@ Value of local variable is 0
 ............................
 ```
 
-##### Retry
+#### Retry
 
 **Syntax:**
 
