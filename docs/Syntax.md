@@ -84,7 +84,7 @@ Ruby dot "." and double Colon "::" Operators
 
 ### If...Else
 
-**Syntax**
+**Syntax:**
 ```
 if conditional [then]
 	  code...
@@ -100,7 +100,7 @@ Executes code if the conditional is true. If the conditional is not true, code s
 
 An if expression's conditional is separated from code by the reserved word then, a newline, or a semicolon.
 
-**Example**
+**Example:**
 ```
 x=1
 if x > 2
@@ -111,6 +111,8 @@ else
     puts "I can't guess the number"
 end
 ```
+`x is 1`
+
 **If modifier**
 
 Syntax: 
@@ -122,12 +124,13 @@ Example:
 $debug=1
 print "debug\n" if $debug
 ```
+`debug`
 
 <hr>
 
 ### Unless
 
-**Syntax**
+**Syntax:**
 ```
 unless conditional [then]
     code
@@ -137,7 +140,7 @@ end
 ```
 Executes code if conditional is false. If the conditional is true, code specified in the else clause is executed.
 
-**Example**
+**Example:**
 ```
 x=1
 unless x>2
@@ -146,6 +149,8 @@ unless x>2
   puts "x is greater than 2"
 end
 ```
+`x is less than 2`
+
 **Unless modifier**
 
 Syntax:
@@ -161,12 +166,16 @@ print "2 -- Value is set\n" unless $var
 $var = false
 print "3 -- Value is set\n" unless $var
 ```
+```
+1 -- Value is set
+3 -- Value is set
+```
 
 <hr>
 
 ### Case
 
-**Syntax**
+**Syntax:**
 ```
 case expression
 [when expression [, expression ...] [then]
@@ -203,7 +212,7 @@ else
     stmt3
 end
 ```
-**Example**
+**Example:**
 ```
 $age =  5
 case $age
@@ -219,6 +228,7 @@ else
     puts "adult"
 end
 ```
+`little child`
 
 <hr>
 
