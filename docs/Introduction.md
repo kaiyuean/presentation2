@@ -33,7 +33,7 @@ Ruby is an interpreted scripting language for quick and easy object-oriented pro
 
 <hr>
 
-## Getting started
+## Getting Started
 
 First, you'll want to check whether ruby is installed. From the terminal, type
 
@@ -59,7 +59,7 @@ hello world
 
 <hr>
 
-## Simple example
+## Simple Example
 
 Let's write a function to compute factorials. The mathematical definition of n factorial is:
 ```
