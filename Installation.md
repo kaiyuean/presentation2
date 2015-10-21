@@ -13,7 +13,7 @@
 
 To write your Ruby programs, you will need an editor:
 * If you are working on Windows machine, then you can use any simple text editor like Notepad or Edit plus.
-* VIM (Vi IMproved) is very simple text editor. This is available on almost all Unix machines and now Windows as well. Otherwise, your can use your favorite vi editor to write Ruby programs.
+* VIM is very simple text editor. This is available on almost all Unix machines and now Windows as well. Otherwise, your can use your favorite vi editor to write Ruby programs.
 * RubyWin is a Ruby Integrated Development Environment (IDE) for Windows.
 * Ruby Development Environment (RDE) is also very good IDE for windows users.
 
