@@ -2,8 +2,6 @@
 
 Variables are the memory locations which hold any data to be used by any program. There are five types of variables supported by Ruby. 
 
-<hr>
-
 #### Global Variables
 
 Global variables begin with $. Uninitialized global variables have the value nil and produce warnings with the -w option.
@@ -305,8 +303,6 @@ Ruby methods are very similar to functions in any other programming language. Ru
 Method names should begin with a lowercase letter. If you begin a method name with an uppercase letter, Ruby might think that it is a constant and hence can parse the call incorrectly.
 
 Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.
-
-<hr>
 
 #### Syntax:
 ```
