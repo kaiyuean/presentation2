@@ -558,6 +558,7 @@ catch :lablename do
 end
 ```
 **Example:**
+
 The following example uses a throw to terminate interaction with the user if '!' is typed in response to any prompt.
 ```
 def promptAndGet(prompt)
