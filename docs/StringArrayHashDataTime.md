@@ -156,6 +156,7 @@ This will produce the following result:
 
 `6`
 
+<hr>
 
 ### Hashes
 
@@ -228,6 +229,8 @@ puts "#{keys}"
 This will produce the following result:
 
 `["1", "2"]`
+
+<hr>
 
 ### Date & Time
 
