@@ -26,7 +26,7 @@ Ruby has many good features which attract software developers to learn.
 <hr>
 
 ## References
-* <<Programming Ruby: The Pragmatic Programmers' Guide>> by Andy Hunt, Dave Thomas
+* "Programming Ruby: The Pragmatic Programmers' Guide" by Andy Hunt, Dave Thomas
 * http://www.rubyist.net/~slagell/ruby/getstarted.html
 * https://www.ruby-lang.org/en/documentation/
 * http://ruby-doc.com/docs/ProgrammingRuby/
