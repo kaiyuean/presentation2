@@ -113,19 +113,6 @@ end
 ```
 `x is 1`
 
-**If modifier**
-
-Syntax: 
-
-`code if condition`
-
-Example:
-```
-$debug=1
-print "debug\n" if $debug
-```
-`debug`
-
 <hr>
 
 ### Unless
@@ -150,26 +137,6 @@ unless x>2
 end
 ```
 `x is less than 2`
-
-**Unless modifier**
-
-Syntax:
-
-`code unless conditional`
-
-Example:
-```
-$var =  1
-print "1 -- Value is set\n" if $var
-print "2 -- Value is set\n" unless $var
-
-$var = false
-print "3 -- Value is set\n" unless $var
-```
-```
-1 -- Value is set
-3 -- Value is set
-```
 
 <hr>
 
@@ -261,39 +228,6 @@ Inside the loop i = 2
 Inside the loop i = 3
 Inside the loop i = 4
 ```
-**While modifier:**
-
-Syntax:
-
-`code while condition`
-
-or
-```
-begin 
-  code 
-end while conditional
-```
-Executes code while conditional is true.
-
-If a while modifier follows a begin statement with no rescue or ensure clauses, code is executed once before conditional is evaluated.
-
-Example:
-```
-$i = 0
-$num = 5
-begin
-   puts("Inside the loop i = #$i" )
-   $i +=1
-end while $i < $num
-```
-```
-Inside the loop i = 0
-Inside the loop i = 1
-Inside the loop i = 2
-Inside the loop i = 3
-Inside the loop i = 4
-```
-
 
 #### Until 
 
@@ -323,39 +257,7 @@ Inside the loop i = 3
 Inside the loop i = 4
 Inside the loop i = 5
 ```
-**Until modifier:**
 
-Syntax:
-
-`code until conditional`
-
-or
-```
-begin
-   code
-end until conditional
-```
-Executes code while conditional is false.
-
-If an until modifier follows a begin statement with no rescue or ensure clauses, code is executed once before conditional is evaluated.
-
-Example:
-```
-$i = 0
-$num = 5
-begin
-   puts("Inside the loop i = #$i" )
-   $i +=1;
-end until $i > $num
-```
-```
-Inside the loop i = 0
-Inside the loop i = 1
-Inside the loop i = 2
-Inside the loop i = 3
-Inside the loop i = 4
-Inside the loop i = 5
-```
 ##### For
 
 **Syntax:**

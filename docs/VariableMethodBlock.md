@@ -1,4 +1,170 @@
-### Methods
+### Variables
+
+Variables are the memory locations which hold any data to be used by any program. There are five types of variables supported by Ruby. 
+
+#### Global Variables
+
+Global variables begin with $. Uninitialized global variables have the value nil and produce warnings with the -w option.
+
+Assignment to global variables alters global status. It is not recommended to use global variables. They make programs cryptic.
+
+Here is an example showing usage of global variable.
+```
+$global_variable = 10
+class Class1
+  def print_global
+     puts "Global variable in Class1 is #$global_variable"
+  end
+end
+class Class2
+  def print_global
+     puts "Global variable in Class2 is #$global_variable"
+  end
+end
+
+class1obj = Class1.new
+class1obj.print_global
+class2obj = Class2.new
+class2obj.print_global
+```
+Here $global_variable is a global variable. This will produce the following result:
+
+NOTE: In Ruby you CAN access value of any variable or constant by putting a hash (#) character just before that variable or constant.
+```
+Global variable in Class1 is 10
+Global variable in Class2 is 10
+```
+
+#### Instance Variables
+
+Instance variables begin with @. Uninitialized instance variables have the value nil and produce warnings with the -w option.
+
+Here is an example showing usage of Instance Variables.
+```
+class Customer
+   def initialize(id, name, addr)
+      @cust_id=id
+      @cust_name=name
+      @cust_addr=addr
+   end
+   def display_details()
+      puts "Customer id #@cust_id"
+      puts "Customer name #@cust_name"
+      puts "Customer address #@cust_addr"
+    end
+end
+
+# Create Objects
+cust1=Customer.new("1", "John", "Wisdom Apartments, Ludhiya")
+cust2=Customer.new("2", "Poul", "New Empire road, Khandala")
+
+# Call Methods
+cust1.display_details()
+cust2.display_details()
+```
+Here, @cust_id, @cust_name and @cust_addr are instance variables. This will produce the following result:
+```
+Customer id 1
+Customer name John
+Customer address Wisdom Apartments, Ludhiya
+Customer id 2
+Customer name Poul
+Customer address New Empire road, Khandala
+```
+
+#### Class Variables
+
+Class variables begin with @@ and must be initialized before they can be used in method definitions.
+
+Referencing an uninitialized class variable produces an error. Class variables are shared among descendants of the class or module in which the class variables are defined.
+
+Overriding class variables produce warnings with the -w option.
+
+Here is an example showing usage of class variable:
+```
+class Customer
+   @@no_of_customers=0
+   def initialize(id, name, addr)
+      @cust_id=id
+      @cust_name=name
+      @cust_addr=addr
+   end
+   def display_details()
+      puts "Customer id #@cust_id"
+      puts "Customer name #@cust_name"
+      puts "Customer address #@cust_addr"
+    end
+    def total_no_of_customers()
+       @@no_of_customers += 1
+       puts "Total number of customers: #@@no_of_customers"
+    end
+end
+
+# Create Objects
+cust1=Customer.new("1", "John", "Wisdom Apartments, Ludhiya")
+cust2=Customer.new("2", "Poul", "New Empire road, Khandala")
+
+# Call Methods
+cust1.total_no_of_customers()
+cust2.total_no_of_customers()
+```
+Here @@no_of_customers is a class variable. This will produce the following result:
+```
+Total number of customers: 1
+Total number of customers: 2
+```
+#### Local Variables
+
+Local variables begin with a lowercase letter or _. The scope of a local variable ranges from class, module, def, or do to the corresponding end or from a block's opening brace to its close brace {}.
+
+When an uninitialized local variable is referenced, it is interpreted as a call to a method that has no arguments.
+
+Assignment to uninitialized local variables also serves as variable declaration. The variables start to exist until the end of the current scope is reached. The lifetime of local variables is determined when Ruby parses the program.
+
+In the above example local variables are id, name and addr.
+
+#### Constants
+
+Constants begin with an uppercase letter. Constants defined within a class or module can be accessed from within that class or module, and those defined outside a class or module can be accessed globally.
+
+Constants may not be defined within methods. Referencing an uninitialized constant produces an error. Making an assignment to a constant that is already initialized produces a warning.
+```
+class Example
+   VAR1 = 100
+   VAR2 = 200
+   def show
+       puts "Value of first Constant is #{VAR1}"
+       puts "Value of second Constant is #{VAR2}"
+   end
+end
+
+# Create Objects
+object=Example.new()
+object.show
+```
+Here VAR1 and VAR2 are constant. This will produce the following result:
+```
+Value of first Constant is 100
+Value of second Constant is 200
+```
+#### Pseudo-Variables
+
+They are special variables that have the appearance of local variables but behave like constants. You can not assign any value to these variables.
+* self: The receiver object of the current method.
+
+* true: Value representing true.
+
+* false: Value representing false.
+
+* nil: Value representing undefined.
+
+* __FILE__: The name of the current source file.
+
+* __LINE__: The current line number in the source file.
+
+<hr>
+
+### Method
 
 Ruby methods are very similar to functions in any other programming language. Ruby methods are used to bundle one or more repeatable statements into a single unit.
 
@@ -6,7 +172,7 @@ Method names should begin with a lowercase letter. If you begin a method name wi
 
 Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.
 
-**Syntax:**
+#### Syntax:
 ```
 def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
    expr..
@@ -57,7 +223,7 @@ The programming language is Ruby
 The programming language is Perl
 ```
 
-**Return Values from Methods:**
+#### Return Values from Methods:
 
 Every method in Ruby returns a value by default. This returned value will be the value of the last statement. For example:
 ```
@@ -69,13 +235,13 @@ end
 ```
 This method, when called, will return the last declared variable k.
 
-**Ruby return Statement:**
+#### Ruby return Statement:
 
 The return statement in ruby is used to return one or more values from a Ruby Method.
 
 **Syntax:**
 
-`return [expr[`,' expr...]]`
+`return [expr[',' expr...]]`
 
 If more than two expressions are given, the array containing these values will be the return value. If no expression given, nil will be the return value.
 
@@ -109,7 +275,7 @@ This will produce the following result:
 300
 ```
 
-**Variable Number of Parameters:**
+#### Variable Number of Parameters:
 
 Suppose you declare a method that takes two parameters, whenever you call this method, you need to pass two parameters along with it.
 
@@ -137,7 +303,7 @@ The parameters are M
 The parameters are MCA
 ```
 
-**Class Methods:**
+#### Class Methods:
 
 When a method is defined outside of the class definition, the method is marked as private by default. On the other hand, the methods defined in the class definition are marked as public by default. The default visibility and the private mark of the methods can be changed by public or private of the Module.
 
@@ -157,40 +323,6 @@ See how the method return_date is declared. It is declared with the class name f
 `Accounts.return_date`
 
 To access this method, you need not create objects of the class Accounts.
-
-**Ruby alias Statement:**
-
-This gives alias to methods or global variables. Aliases can not be defined within the method body. The alias of the method keep the current definition of the method, even when methods are overridden.
-
-Making aliases for the numbered global variables ($1, $2,...) is prohibited. Overriding the built-in global variables may cause serious problems.
-
-**Syntax:**
-```
-alias method-name method-name
-alias global-variable-name global-variable-name
-```
-**Example:**
-```
-alias foo bar
-alias $MATCH $&
-```
-Here we have defined foo alias for bar and $MATCH is an alias for $&
-
-**Ruby undef Statement:**
-
-This cancels the method definition. An undef can not appear in the method body.
-
-By using undef and alias, the interface of the class can be modified independently from the superclass, but notice it may be broke programs by the internal method call to self.
-
-**Syntax:**
-
-`undef method-name`
-
-**Example:**
-
-To undefine a method called bar do the following:
-
-`undef bar`
 
 <hr>
 
