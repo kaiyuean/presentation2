@@ -18,6 +18,6 @@
 
 6. [File I/O, Exceptions](https://github.com/kaiyuean/presentation2/blob/master/docs/ExceptionFile.md)
 
-7. [Object-Oriented programming in Ruby](https://github.com/kaiyuean/presentation2/blob/master/docs/ObjectOriented.md)
+7. [Object-Oriented Programming in Ruby](https://github.com/kaiyuean/presentation2/blob/master/docs/ObjectOriented.md)
 
 8. [Conclusion](https://github.com/kaiyuean/presentation2/blob/master/docs/Conclusion.md)
